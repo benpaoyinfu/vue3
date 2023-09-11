@@ -1,3 +1,3 @@
-export function isObject(o) {
-  return o != null && typeof o === "object";
+export function isObject(value: unknown): value is Record<any, any> {
+  return typeof value === "object" && value !== null;
 }
